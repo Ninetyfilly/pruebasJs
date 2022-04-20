@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Fundamentos JavaScript</h1>
+    <script>
+        // let hola="hola mundo";
+        // console.log(hola)
+
+
+        //interpolacion de variables
+        //Template String
+        // let nombre= 'luis'
+        // let apellido='Carballo'
+        // let saludo = `Hola mi nombre es ${nombre} ${apellido}`
+        // console.log(saludo)
+        //Elementoa nuevos de For
+
+        //El metodo forin me permite iterar las propiedades de un arreglo
+        //para acceder al valor de la propiedad en vez de usar la notacion del '.' se utilizan corchetes, 
+        //como en un arreglo 
+        // const luis = {
+        //   nombre: "Luis",
+        //   apellido: "Carballo",
+        //   edad: 21,
+        // }
+
+        // for(const propiedad in luis){
+        //   console.log(`key: ${propiedad}, value: ${luis[propiedad]}`)
+        // }
+
+        //el metodo forof me permite recorrer todos los elementos de cualquier objeto que sea iterable en js
+        // const numeros= [10,20,30,40,50,60,70,80,90]
+        // for (const elemento of numeros) {
+        //   console.log(elemento);
+        // }
+
+        //break y continue 
+        //break se utiliza para salir completamente de una iteracion
+        // for (let i = 0; i < numeros.length; i++) {
+        //   if(i == 5){
+        //     break
+        //   }
+        //   console.log(numeros[i])
+          
+        // }
+        //continue lo que hace es saltar la iteracion en la que se encuentra pero sin salirse completamente de ella
+        // for (let i = 0; i < numeros.length; i++) {
+        //   if(i == 5){
+        //     continue
+        //   }
+        //   console.log(numeros[i])
+          
+        // }
+
+        //DESTRUCTURACION
+        //sin destructutacion
+        // let numeros = [1,2,3]
+        // let uno = numeros[0],dos = numeros[1],tres = numeros[2];
+        // console.log(uno,dos,tres)
+
+        // //con destructuracion
+        // const [one,two,three] = numeros;
+        // console.log(one,two,three)
+
+        // //se puede utilizar con arreglos y con objetos
+        // const yo = {
+        //   nombre: "luis",
+        //   apellido: "carballo",
+        //   edad: 21
+        // }
+        // let {nombre,apellido,edad} = yo;
+        // console.log(nombre,apellido,edad)
+        //NOTA: para que la destructuracioon funcione en los objetos, es importante que la variable se llame
+        //igual que el atributo/propiedad del objeto
+
+        //PARAMETROS REST 
+        //el parametro rest se utiliza cuando quieres tener infinitos parametros en una funcion, que guarda en un 
+        // arreglo dichos parametros y que puedes utilizar con un forEach por ejemplo
+        function sumar(a,b, ...c){
+         let result = a+b;
+         console.log(c)
+         c.forEach(function(n){
+          result +=n;
+         })
+         return result;
+        }
+        console.log(sumar(1,2,3,4,5,6,7))
+    </script>
+  </body>
+</html>
